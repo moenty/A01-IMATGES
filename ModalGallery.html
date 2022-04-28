@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  @font-face {
+        font-family: Branda;
+        src: url("./Branda-yolq.ttf");
+    }
+    h1 {
+        font-family: Branda;
+    }
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Gallery</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+
+      <h1>MODAL GALLERY</h1>
+
+      <div class="imageContainer">
+        <div class="image"><img src="img1.jpg" alt=""></div>
+        <div class="image"><img src="img2.jpg" alt=""></div>
+        <div class="image"><img src="img3.jpg" alt=""></div>
+        <div class="image"><img src="img4.jpg" alt=""></div>
+        <div class="image"><img src="img5.jpg" alt=""></div>
+        <div class="image"><img src="img6.jpg" alt=""></div>
+      </div>
+
+      <div class="popup-image">
+        <span>&times;</span>
+        <img src="img1.jpg" alt="">
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.imageContainer img').forEach(image => {
+        image.onclick = () =>{
+          document.querySelector('.popup-image').style.display = 'block';
+          document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+      });
+    
+    document.querySelector('.popup-image span').onclick = () =>{
+      document.querySelector('.popup-image').style.display = 'none';
+    }
+
+    </script>
+</body>
+</html>
