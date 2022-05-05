@@ -14,7 +14,7 @@ body{
 .container h1{
     font-size: 40px;
     font-weight: normal;
-    color: crimson;
+    color: rgb(220, 79, 98);
     padding: 15px;
     text-align: center;
     text-transform: capitalize; 
@@ -30,7 +30,7 @@ body{
 .container .imageContainer .image{
     height: 250px;
     width: 350px;
-    border: 10px solid white;
+    border: 7px solid white;
     box-shadow: 0 5px rgba(0,0,0,.1);
     overflow: hidden;
     cursor: pointer;
